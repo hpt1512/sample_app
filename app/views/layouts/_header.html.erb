@@ -1,0 +1,16 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container d-flex flex-center">
+        <%= link_to t("sample_app"), "#", id: "logo" %>
+        <div>
+          <%= link_to t("english"), locale:"en" %> |
+          <%= link_to t("vietnamese"), locale:"vi" %>
+        </div>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t("home"), static_pages_home_path %></li>
+            <li><%= link_to t("help"), static_pages_help_path %></li>
+            <li><%= link_to t("login"), "#" %></li>
+          </ul>
+        </nav>
+      </div>
+</header>
