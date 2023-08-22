@@ -1,0 +1,15 @@
+# config/locales/vi.yml
+vi:
+  title: "Học lập trình Ruby"
+  new_product: "Thêm mới sản phẩm"
+  sample_app: "ỨNG DỤNG MẪU"
+  product: "Sản phẩm"
+  home: "Trang chủ"
+  help: "Trợ giúp"
+  login: "Đăng nhập"
+  name: "Tên"
+  show: "Xem"
+  edit: "Sửa"
+  destroy: "Xóa"
+  vietnamese: "Tiếng Việt"
+  english: "Tiếng Anh"
