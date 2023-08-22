@@ -30,4 +30,17 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: "Ruby on rails sample app"
+  new_product: "New product"
+  sample_app: "SAMPLE APP"
+  product: "Products"
+  home: "Home"
+  help: "Help"
+  login: "Login"
+  name: "Name"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  vietnamese: "Vietnamese"
+  english: "English"
+
