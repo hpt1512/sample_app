@@ -14,11 +14,34 @@ class User < ApplicationRecord
 
   has_many :microposts, dependent: :destroy
 
+  has_many :active_relationships, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :passive_relationships, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
+
   has_secure_password
   attr_accessor :remember_token, :activation_token, :reset_token
 
+  # Follows a user.
+  def follow other_user
+    following << other_user
+  end
+
+  # Unfollows a user.
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  # Returns if the current user is following.
+  def following? other_user
+    following.include? other_user
+  end
+
   def feed
-    microposts.newest
+    # byebug
+    Micropost.relate_post(following_ids << id)
   end
 
   def password_reset_expired?
@@ -60,10 +83,6 @@ class User < ApplicationRecord
   def forget
     update_column :remember_digest, nil
   end
-
-  # def authenticated? remember_token
-  #   BCrypt::Password.new(remember_digest).is_password? remember_token
-  # end
 
   def authenticated? attribute, token
     digest = send "#{attribute}_digest"

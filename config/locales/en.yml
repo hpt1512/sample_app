@@ -98,3 +98,7 @@ en:
   micropost_feed: "Micropost Feed"
   welcome_home: "Welcome to Sample app!"
   microposts: "Microposts"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "Following"
+  followers: "Followers"

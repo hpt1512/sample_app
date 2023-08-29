@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'relationship/create'
+  get 'relationship/destroy'
   root "static_pages#home"
 
   get "/login", to: "sessions#new"
@@ -17,4 +19,12 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
 
   resources :microposts, only: %i(create destroy)
+
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
+  resources :relationships, only: %i(create destroy)
 end

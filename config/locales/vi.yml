@@ -67,3 +67,7 @@ vi:
   micropost_feed: "Bài viết cho bạn"
   welcome_home: "Chào mừng đến với Sample app!"
   microposts: "Số bài viết"
+  follow: "Theo dõi"
+  unfollow: "Bỏ theo dõi"
+  following: "Đang theo dõi"
+  followers: "Người theo dõi"
