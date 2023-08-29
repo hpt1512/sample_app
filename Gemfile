@@ -21,6 +21,10 @@ gem "importmap-rails"
 # i18n
 gem "rails-i18n"
 
+gem "active_storage_validations"
+gem "image_processing"
+gem "mini_magick"
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
@@ -88,3 +92,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "jquery-rails"
