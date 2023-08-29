@@ -13,3 +13,8 @@ vi:
   destroy: "Xóa"
   vietnamese: "Tiếng Việt"
   english: "Tiếng Anh"
+  sign_up: "Đăng ký"
+  create_my_account: "Tạo mới tài khoản"
+  user_created_success: "Thêm mới User thành công"
+  the_form_contains: "Biểu mẫu chứa"
+  error: "lỗi"

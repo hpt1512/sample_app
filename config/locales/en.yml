@@ -43,4 +43,8 @@ en:
   destroy: "Destroy"
   vietnamese: "Vietnamese"
   english: "English"
-
+  sign_up: "Sign up"
+  create_my_account: "Create my account"
+  user_created_success: "User created successful"
+  the_form_contains: "The form contains"
+  error: "error"

@@ -1,11 +1,11 @@
 class User < ApplicationRecord
-  VALID_EMAIL_REGEX = Regexp.new(Settings.users.EMAIL_REGEX)
+  VALID_EMAIL_REGEX = Settings.users.EMAIL_REGEX
 
   validates :name, presence: true,
-  length: {maximum: Settings.users.name_maximum}
+    length: {maximum: Settings.users.name_maximum}
   validates :email, presence: true,
-  length: {maximum: Settings.users.email_maximum},
-  format: {with: VALID_EMAIL_REGEX}, uniqueness: true
+    length: {maximum: Settings.users.email_maximum},
+    format: {with: VALID_EMAIL_REGEX}, uniqueness: true
 
   before_save :downcase_email
 

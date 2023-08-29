@@ -1,4 +1,4 @@
-users: 
+users:
   name_maximum: 50
   email_maximum: 255
-  EMAIL_REGEX: "\\A[\\w+\\-.]+@[a-z\\d\\-.]+\\.[a-z]+\\z"
+  EMAIL_REGEX: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
