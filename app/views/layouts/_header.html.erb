@@ -11,7 +11,9 @@
             <li><%= link_to t("help"), static_pages_help_path %></li>
 
             <% if logged_in? %>
+              <li><%= link_to t("users"), users_path %></li>
               <li><%= link_to t("profile"), current_user %></li>
+              <li><%= link_to t("setting"), edit_user_path(current_user) %></li>
               <li><%= link_to t("log_out"), logout_path, data: { "turbo-method": :delete } %></li>
             <% else %>
               <li><%= link_to t("log_in"), login_path %></li>

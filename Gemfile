@@ -29,6 +29,10 @@ gem "stimulus-rails"
 
 gem "bcrypt", "~> 3.1.7"
 
+gem "faker", "~> 3.2"
+
+gem "pagy"
+
 gem "config"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]

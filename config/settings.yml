@@ -2,3 +2,5 @@ users:
   name_maximum: 50
   email_maximum: 255
   EMAIL_REGEX: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  number_of_page: 5
+  password_minimum: 5
