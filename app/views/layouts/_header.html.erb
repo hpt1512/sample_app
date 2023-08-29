@@ -9,6 +9,7 @@
           <ul class="nav navbar-nav navbar-right d-flex flex-center">
             <li><%= link_to t("home"), static_pages_home_path %></li>
             <li><%= link_to t("help"), static_pages_help_path %></li>
+            <li><%= link_to t("users"), users_path %></li>
 
             <% if logged_in? %>
               <li><%= link_to t("users"), users_path %></li>

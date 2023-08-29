@@ -18,9 +18,10 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
+      # log_in @user
+      UserMailer.account_activation(@user).deliver_now
       flash[:success] = t("user_created_success")
-      redirect_to @user
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
