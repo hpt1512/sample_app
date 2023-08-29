@@ -78,7 +78,9 @@ class UsersController < ApplicationController
   end
 
   def admin_user
-    redirect_to root_path unless current_user.admin?
+    return if current_user.admin?
+
+    redirect_to root_path
     flash[:danger] = t("arenot_admin")
   end
 end

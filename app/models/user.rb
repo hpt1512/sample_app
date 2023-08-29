@@ -13,7 +13,21 @@ class User < ApplicationRecord
   before_create :create_activation_digest
 
   has_secure_password
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
+
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
 
   class << self
     # Returns the hash digest of the given string.
