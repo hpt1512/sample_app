@@ -17,6 +17,8 @@ module RailsTutorial
     # config/application.rb
     config.i18n.default_locale = :vi
 
+    config.action_view.embed_authenticity_token_in_remote_forms = true
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

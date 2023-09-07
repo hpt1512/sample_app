@@ -11,6 +11,7 @@
   <div class="col-md-8">
     <% if @microposts.any? %>
     <h3><%= t("microposts") %> (<%= @microposts.count %>)</h3>
+    <%= render "follow_form" if logged_in? %>
     <ol class="microposts">
       <%= render @microposts %>
     </ol>
